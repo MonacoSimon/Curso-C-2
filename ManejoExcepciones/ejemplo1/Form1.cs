@@ -19,25 +19,38 @@ namespace ejemplo1
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            int n1, n2, n3;
+            int resultado;
+            
             try
             {
-
-                n1 = int.Parse(txtNumero1.Text);
-                n2 = int.Parse(txtNumero2.Text);
-                n3 = n1 + n2;
-
-                lblResultado.Text = "EL RESULTADO ES: " + n3.ToString();
-
+                resultado = calcular();
+                lblResultado.Text = "EL RESULTADO ES: " + resultado;
             }
             catch (FormatException ex)
             {
-                MessageBox.Show("no seas boludo flaco, ingresa un numero.");
+                MessageBox.Show("ingresar solo numeros");
                 MessageBox.Show(ex.ToString());
-                
             }
-            
+            finally
+            {
+             
+            }
+        }
+        private int calcular()
+        {
+            int n1, n2, n3;
+            try
+            {
+                n1 = int.Parse(txtNumero1.Text);
+                n2 = int.Parse(txtNumero2.Text);
+                n3 = n1 + n2;
+                return n3;
+            }
+            catch (Exception ex)
+            {
 
+                throw ex;
+            }
         }
     }
 }
