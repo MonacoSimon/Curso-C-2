@@ -12,5 +12,7 @@ namespace Ejemplo_discos
         public int IdEstilo { get; set; }
         public int CantidadCanciones { get; set; }
         public string FechaLanzamiento { get; set; }
+        public string UrlImagenTapa { get; set; }
+        public TipoEdicion Descipcion { get; set; }
     }
 }

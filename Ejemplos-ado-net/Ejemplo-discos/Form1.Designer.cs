@@ -30,7 +30,9 @@ namespace Ejemplo_discos
         private void InitializeComponent()
         {
             this.dgvDiscos = new System.Windows.Forms.DataGridView();
+            this.pbDiscos = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiscos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDiscos)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvDiscos
@@ -40,19 +42,31 @@ namespace Ejemplo_discos
             this.dgvDiscos.Name = "dgvDiscos";
             this.dgvDiscos.RowHeadersWidth = 51;
             this.dgvDiscos.RowTemplate.Height = 24;
-            this.dgvDiscos.Size = new System.Drawing.Size(776, 426);
+            this.dgvDiscos.Size = new System.Drawing.Size(637, 404);
             this.dgvDiscos.TabIndex = 0;
+            this.dgvDiscos.SelectionChanged += new System.EventHandler(this.dgvDiscos_SelectionChanged);
+            // 
+            // pbDiscos
+            // 
+            this.pbDiscos.Location = new System.Drawing.Point(690, 12);
+            this.pbDiscos.Name = "pbDiscos";
+            this.pbDiscos.Size = new System.Drawing.Size(335, 404);
+            this.pbDiscos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbDiscos.TabIndex = 1;
+            this.pbDiscos.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1037, 600);
+            this.Controls.Add(this.pbDiscos);
             this.Controls.Add(this.dgvDiscos);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiscos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDiscos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -60,6 +74,7 @@ namespace Ejemplo_discos
         #endregion
 
         private System.Windows.Forms.DataGridView dgvDiscos;
+        private System.Windows.Forms.PictureBox pbDiscos;
     }
 }
 

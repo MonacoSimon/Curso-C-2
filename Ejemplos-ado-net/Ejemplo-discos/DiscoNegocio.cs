@@ -19,7 +19,7 @@ namespace Ejemplo_discos
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=DISCOS_DB; integrated security=true;";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "select Titulo, FechaLanzamiento, CantidadCanciones, IdEstilo from DISCOS";
+                comando.CommandText = "select Titulo, FechaLanzamiento, CantidadCanciones, IdEstilo, UrlImagenTapa, t.Descripcion from DISCOS as d, TIPOSEDICION as t where d.Id = t.Id";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -32,6 +32,9 @@ namespace Ejemplo_discos
                     aux.FechaLanzamiento = (string)lector["FechaLanzamiento"].ToString();
                     aux.CantidadCanciones = (int)lector["CantidadCanciones"];
                     aux.IdEstilo = (int)lector["IdEstilo"];
+                    aux.UrlImagenTapa = (string)lector["UrlImagenTapa"];
+                    aux.Descipcion = new TipoEdicion();
+                    aux.Descipcion.Descripcion = (string)lector["Descripcion"];
 
                     lista.Add(aux);
                 }
