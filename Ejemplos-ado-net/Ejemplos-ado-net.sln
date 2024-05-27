@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34729.46
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejemplo-Pokemons", "Ejemplo-Pokemons\Ejemplo-Pokemons.csproj", "{B15A714D-7665-4D0C-A8FA-D909F589A5B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejemplo-discos", "Ejemplo-discos\Ejemplo-discos.csproj", "{65447FEE-EB3E-4175-B1CD-BD9D5FBEA26F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B15A714D-7665-4D0C-A8FA-D909F589A5B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B15A714D-7665-4D0C-A8FA-D909F589A5B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B15A714D-7665-4D0C-A8FA-D909F589A5B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B15A714D-7665-4D0C-A8FA-D909F589A5B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65447FEE-EB3E-4175-B1CD-BD9D5FBEA26F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65447FEE-EB3E-4175-B1CD-BD9D5FBEA26F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65447FEE-EB3E-4175-B1CD-BD9D5FBEA26F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65447FEE-EB3E-4175-B1CD-BD9D5FBEA26F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B15DB8F0-6C5A-4627-9C4D-3295767396A1}
+	EndGlobalSection
+EndGlobal
