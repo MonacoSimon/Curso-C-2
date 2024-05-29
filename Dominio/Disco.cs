@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ejemplo_discos
+namespace Dominio
 {
-    class Disco
+    public class Disco
     {
         public string Titulo { get; set; }
         public int IdEstilo { get; set; }

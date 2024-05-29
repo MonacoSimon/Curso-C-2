@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace Negocio
 {
-    public class AccesoDato
+    class AccesoDatos
     {
         private SqlConnection conexion;
         private SqlCommand comando;
@@ -17,13 +17,11 @@ namespace Negocio
             get { return lector; }
         }
 
-        public AccesoDato()
+        public AccesoDatos()
         {
-            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=POKEDEX_DB; integrated security=true");
+            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=DISCOS_DB; integrated security=true;");
             comando = new SqlCommand();
-
         }
-
         public void setearConsulta(string consulta)
         {
             comando.CommandType = System.Data.CommandType.Text;
@@ -36,21 +34,7 @@ namespace Negocio
             {
                 conexion.Open();
                 lector = comando.ExecuteReader();
-            }
-            catch (Exception ex)
-            {
 
-                throw ex;
-
-            }
-        }
-        public void ejecutarAccion()
-        {
-            comando.Connection = conexion;
-            try
-            {
-                conexion.Open();
-                comando.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
@@ -60,13 +44,11 @@ namespace Negocio
         }
         public void cerrarConexion()
         {
-            if (lector != null)
+            if(lector != null)
             {
                 lector.Close();
             }
             conexion.Close();
-
         }
-
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ejemplo_discos
+namespace Dominio
 {
-    class TipoEdicion
+    public class TipoEdicion
     {
         public string Descripcion { get; set; }
         public override string ToString()

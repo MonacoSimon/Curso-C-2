@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34729.46
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejemplo-discos", "Ejemplo-discos.csproj", "{65447FEE-EB3E-4175-B1CD-BD9D5FBEA26F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "..\Dominio\Dominio.csproj", "{CCC4F5EA-A7BB-4551-B125-7DF00716D71A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "..\Negocio\Negocio.csproj", "{9EAE7AAA-351E-41C8-A7E4-767C1F203232}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65447FEE-EB3E-4175-B1CD-BD9D5FBEA26F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65447FEE-EB3E-4175-B1CD-BD9D5FBEA26F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65447FEE-EB3E-4175-B1CD-BD9D5FBEA26F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65447FEE-EB3E-4175-B1CD-BD9D5FBEA26F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCC4F5EA-A7BB-4551-B125-7DF00716D71A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCC4F5EA-A7BB-4551-B125-7DF00716D71A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCC4F5EA-A7BB-4551-B125-7DF00716D71A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCC4F5EA-A7BB-4551-B125-7DF00716D71A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EAE7AAA-351E-41C8-A7E4-767C1F203232}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EAE7AAA-351E-41C8-A7E4-767C1F203232}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EAE7AAA-351E-41C8-A7E4-767C1F203232}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EAE7AAA-351E-41C8-A7E4-767C1F203232}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86C61A53-8DB1-46DC-A981-A6AB84AA7B38}
+	EndGlobalSection
+EndGlobal

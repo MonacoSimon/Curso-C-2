@@ -63,6 +63,7 @@ namespace Ejemplo_discos
             this.Controls.Add(this.pbDiscos);
             this.Controls.Add(this.dgvDiscos);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiscos)).EndInit();
