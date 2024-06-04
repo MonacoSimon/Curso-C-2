@@ -39,17 +39,20 @@ namespace Ejemplo_Pokemons
             // dgvPokemons
             // 
             this.dgvPokemons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPokemons.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvPokemons.Location = new System.Drawing.Point(12, 12);
+            this.dgvPokemons.MultiSelect = false;
             this.dgvPokemons.Name = "dgvPokemons";
             this.dgvPokemons.RowHeadersWidth = 51;
             this.dgvPokemons.RowTemplate.Height = 24;
-            this.dgvPokemons.Size = new System.Drawing.Size(637, 343);
+            this.dgvPokemons.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPokemons.Size = new System.Drawing.Size(709, 343);
             this.dgvPokemons.TabIndex = 0;
             this.dgvPokemons.SelectionChanged += new System.EventHandler(this.dgvPokemons_SelectionChanged);
             // 
             // pbPokemon
             // 
-            this.pbPokemon.Location = new System.Drawing.Point(655, 12);
+            this.pbPokemon.Location = new System.Drawing.Point(727, 12);
             this.pbPokemon.Name = "pbPokemon";
             this.pbPokemon.Size = new System.Drawing.Size(331, 343);
             this.pbPokemon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -70,13 +73,13 @@ namespace Ejemplo_Pokemons
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(998, 563);
+            this.ClientSize = new System.Drawing.Size(1070, 602);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.pbPokemon);
             this.Controls.Add(this.dgvPokemons);
             this.Name = "frmPokemon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "frmPokemon";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPokemons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPokemon)).EndInit();

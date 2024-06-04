@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dominio;
 using Negocio;
+using System.Net;
 
 namespace Ejemplo_discos
 {
@@ -22,11 +23,24 @@ namespace Ejemplo_discos
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            cargar();
+            
+        }
+        public void cargar()
+        {
             DiscoNegocio negocio = new DiscoNegocio();
-            listaDisco = negocio.listar();
-            dgvDiscos.DataSource = listaDisco;
-            dgvDiscos.Columns["UrlImagenTapa"].Visible = false;
-            cargarimagen(listaDisco[0].UrlImagenTapa);
+            try
+            {
+                listaDisco = negocio.listar();
+                dgvDiscos.DataSource = listaDisco;
+                dgvDiscos.Columns["UrlImagenTapa"].Visible = false;
+                cargarimagen(listaDisco[0].UrlImagenTapa);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void dgvDiscos_SelectionChanged(object sender, EventArgs e)
@@ -40,6 +54,12 @@ namespace Ejemplo_discos
             {
                 pbDiscos.Load(imagen);
             }
+            
+            catch(WebException ex)
+            {
+                MessageBox.Show("sin internet");
+                Close();
+            }
             catch (Exception)
             {
 
@@ -47,6 +67,11 @@ namespace Ejemplo_discos
             }
         }
 
-        
+        private void btnAltaDisco_Click(object sender, EventArgs e)
+        {
+            frmAltaDisco alta = new frmAltaDisco();
+            alta.ShowDialog();
+            cargar();
+        }
     }
 }

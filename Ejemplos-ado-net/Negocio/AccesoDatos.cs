@@ -58,6 +58,10 @@ namespace Negocio
                 throw ex;
             }
         }
+        public void setearParametro(string nombre, object valor)
+        {
+            comando.Parameters.AddWithValue(nombre, valor);
+        }
         public void cerrarConexion()
         {
             if (lector != null)
@@ -67,6 +71,7 @@ namespace Negocio
             conexion.Close();
 
         }
+       
 
     }
 }

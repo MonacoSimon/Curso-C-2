@@ -20,7 +20,7 @@ namespace Negocio
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=DISCOS_DB; integrated security=true;";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "select Titulo, FechaLanzamiento, CantidadCanciones, IdEstilo, UrlImagenTapa, t.Descripcion from DISCOS as d, TIPOSEDICION as t where d.Id = t.Id";
+                comando.CommandText = "select Titulo, FechaLanzamiento, CantidadCanciones, IdEstilo, UrlImagenTapa, t.Descripcion from DISCOS as d left join TIPOSEDICION as t on d.Id = t.Id";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -46,12 +46,27 @@ namespace Negocio
             catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
         public void agregar(Disco nuevo)
         {
+            AccesoDatos accesoDatos = new AccesoDatos();
+            try
+            {
+                accesoDatos.setearConsulta("INSERT INTO DISCOS (Titulo, CantidadCanciones, UrlImagenTapa) VALUES ('" + nuevo.Titulo + "', " + nuevo.CantidadCanciones +", '" + nuevo.UrlImagenTapa + "')");
+                //accesoDatos.setearParametro("@FechaLanzamiento", nuevo.FechaLanzamiento);
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
 
+                throw ex;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
         }
         public void modificar(Disco modificar)
         {

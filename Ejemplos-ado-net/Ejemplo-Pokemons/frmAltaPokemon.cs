@@ -33,6 +33,7 @@ namespace Ejemplo_Pokemons
                 poke.Numero = int.Parse(txtbNumero.Text);
                 poke.Nombre = txtbNombre.Text;
                 poke.Descripcion = txtbNumero.Text;
+                poke.UrlImagen = txtbUrlImagen.Text;
                 poke.Tipo = (Elemento)cboTipo.SelectedItem;
                 poke.Debilidad = (Elemento)cboDebilidad.SelectedItem;
 
@@ -60,6 +61,24 @@ namespace Ejemplo_Pokemons
 
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void txtbUrlImagen_Leave(object sender, EventArgs e)
+        {
+            cargarImagen(txtbUrlImagen.Text);
+        }
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbxPokemon.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+
+                pbxPokemon.Load("https://clipground.com/images/image-placeholder-clipart-1.png");
+            }
+
         }
     }
 }
