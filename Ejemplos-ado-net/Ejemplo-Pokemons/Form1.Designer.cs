@@ -32,6 +32,8 @@ namespace Ejemplo_Pokemons
             this.dgvPokemons = new System.Windows.Forms.DataGridView();
             this.pbPokemon = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnModificarPokemon = new System.Windows.Forms.Button();
+            this.btnBorrarFisico = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPokemons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPokemon)).BeginInit();
             this.SuspendLayout();
@@ -69,11 +71,33 @@ namespace Ejemplo_Pokemons
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // btnModificarPokemon
+            // 
+            this.btnModificarPokemon.Location = new System.Drawing.Point(142, 406);
+            this.btnModificarPokemon.Name = "btnModificarPokemon";
+            this.btnModificarPokemon.Size = new System.Drawing.Size(89, 48);
+            this.btnModificarPokemon.TabIndex = 3;
+            this.btnModificarPokemon.Text = "Modificar Pokemon";
+            this.btnModificarPokemon.UseVisualStyleBackColor = true;
+            this.btnModificarPokemon.Click += new System.EventHandler(this.btnModificarPokemon_Click);
+            // 
+            // btnBorrarFisico
+            // 
+            this.btnBorrarFisico.Location = new System.Drawing.Point(264, 406);
+            this.btnBorrarFisico.Name = "btnBorrarFisico";
+            this.btnBorrarFisico.Size = new System.Drawing.Size(86, 48);
+            this.btnBorrarFisico.TabIndex = 4;
+            this.btnBorrarFisico.Text = "Borrar Fisico";
+            this.btnBorrarFisico.UseVisualStyleBackColor = true;
+            this.btnBorrarFisico.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmPokemon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1070, 602);
+            this.Controls.Add(this.btnBorrarFisico);
+            this.Controls.Add(this.btnModificarPokemon);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.pbPokemon);
             this.Controls.Add(this.dgvPokemons);
@@ -92,6 +116,8 @@ namespace Ejemplo_Pokemons
         private System.Windows.Forms.DataGridView dgvPokemons;
         private System.Windows.Forms.PictureBox pbPokemon;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnModificarPokemon;
+        private System.Windows.Forms.Button btnBorrarFisico;
     }
 }
 

@@ -14,9 +14,16 @@ namespace Ejemplo_Pokemons
 {
     public partial class frmAltaPokemon : Form
     {
+        private Pokemon pokemon = null;
         public frmAltaPokemon()
         {
             InitializeComponent();
+        }
+        public frmAltaPokemon(Pokemon pokemon)
+        {
+            InitializeComponent();
+            this.pokemon = pokemon;
+            Text = "Modificar Pokemon";
         }
 
         private void btnCacelar_Click(object sender, EventArgs e)
@@ -26,19 +33,31 @@ namespace Ejemplo_Pokemons
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Pokemon poke = new Pokemon();
+            //Pokemon poke = new Pokemon();
             PokemonNegocio negocio = new PokemonNegocio();
             try
             {
-                poke.Numero = int.Parse(txtbNumero.Text);
-                poke.Nombre = txtbNombre.Text;
-                poke.Descripcion = txtbNumero.Text;
-                poke.UrlImagen = txtbUrlImagen.Text;
-                poke.Tipo = (Elemento)cboTipo.SelectedItem;
-                poke.Debilidad = (Elemento)cboDebilidad.SelectedItem;
+                if (pokemon == null)
+                    pokemon = new Pokemon();
+                pokemon.Numero = int.Parse(txtbNumero.Text);
+                pokemon.Nombre = txtbNombre.Text;
+                pokemon.Descripcion = txtbNumero.Text;
+                pokemon.UrlImagen = txtbUrlImagen.Text;
+                pokemon.Tipo = (Elemento)cboTipo.SelectedItem;
+                pokemon.Debilidad = (Elemento)cboDebilidad.SelectedItem;
+                
+                if(pokemon.Id != 0)
+                {
+                    negocio.modificar(pokemon);
+                    MessageBox.Show("Modificado exitosamnete");
+                }
+                else
+                {
+                    negocio.agregar(pokemon);
+                    MessageBox.Show("agregado exitosamente");
+                }
 
-                negocio.agregar(poke);
-                MessageBox.Show("agregado exitosamente");
+                
                 Close();
             }
             catch (Exception ex)
@@ -54,7 +73,22 @@ namespace Ejemplo_Pokemons
             try
             {
                 cboTipo.DataSource = elementoNegocio.listar();
+                cboTipo.ValueMember = "Id";
+                cboTipo.DisplayMember = "Descripcion";
                 cboDebilidad.DataSource = elementoNegocio.listar();
+                cboDebilidad.ValueMember = "Id";
+                cboDebilidad.DisplayMember = "Descripcion";
+
+                if(pokemon != null)
+                {
+                    txtbNumero.Text = pokemon.Numero.ToString();
+                    txtbNombre.Text = pokemon.Nombre;
+                    txtbDescripcion.Text = pokemon.Descripcion;
+                    txtbUrlImagen.Text = pokemon.UrlImagen;
+                    cargarImagen(pokemon.UrlImagen);
+                    cboTipo.SelectedValue = pokemon.Tipo.Id;
+                    cboDebilidad.SelectedValue = pokemon.Debilidad.Id;
+                }
             }
             catch (Exception ex)
             {
