@@ -114,5 +114,16 @@ namespace Ejemplo_Pokemons
             }
 
         }
+
+        private void btnAgregarImagen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog archivo = new OpenFileDialog();
+            archivo.Filter = "jpg|*.jpg";
+            if(archivo.ShowDialog() == DialogResult.OK)
+            {
+                txtbUrlImagen.Text = archivo.FileName;
+                cargarImagen(archivo.FileName);
+            }
+        }
     }
 }
