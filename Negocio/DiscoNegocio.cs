@@ -20,7 +20,7 @@ namespace Negocio
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=DISCOS_DB; integrated security=true;";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "select Titulo, FechaLanzamiento, CantidadCanciones, IdEstilo, UrlImagenTapa, t.Descripcion from DISCOS as d left join TIPOSEDICION as t on d.Id = t.Id";
+                comando.CommandText = "select Titulo, FechaLanzamiento, CantidadCanciones, IdEstilo, UrlImagenTapa from DISCOS";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -34,8 +34,8 @@ namespace Negocio
                     aux.CantidadCanciones = (int)lector["CantidadCanciones"];
                     aux.IdEstilo = (int)lector["IdEstilo"];
                     aux.UrlImagenTapa = (string)lector["UrlImagenTapa"];
-                    aux.Descipcion = new TipoEdicion();
-                    aux.Descipcion.Descripcion = (string)lector["Descripcion"];
+                    //aux.Descipcion = new TipoEdicion();
+                    //aux.Descipcion.Descripcion = (string)lector["Descripcion"];
 
                     lista.Add(aux);
                 }

@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dominio;
 using Negocio;
+using System.Configuration;
 
 namespace Ejemplo_Pokemons
 {
     public partial class frmAltaPokemon : Form
     {
         private Pokemon pokemon = null;
+        private OpenFileDialog archivo = null;
         public frmAltaPokemon()
         {
             InitializeComponent();
@@ -55,6 +58,11 @@ namespace Ejemplo_Pokemons
                 {
                     negocio.agregar(pokemon);
                     MessageBox.Show("agregado exitosamente");
+                }
+                if(archivo != null && !(txtbUrlImagen.Text.ToUpper().Contains("HTTP")))
+                {
+
+                    File.Copy(archivo.FileName, ConfigurationManager.AppSettings["carpeta-imagenes"] + archivo.SafeFileName);
                 }
 
                 
@@ -117,12 +125,13 @@ namespace Ejemplo_Pokemons
 
         private void btnAgregarImagen_Click(object sender, EventArgs e)
         {
-            OpenFileDialog archivo = new OpenFileDialog();
-            archivo.Filter = "jpg|*.jpg";
+            archivo = new OpenFileDialog();
+            archivo.Filter = "jpg|*.jpg;|png|*.png";
             if(archivo.ShowDialog() == DialogResult.OK)
             {
                 txtbUrlImagen.Text = archivo.FileName;
                 cargarImagen(archivo.FileName);
+
             }
         }
     }

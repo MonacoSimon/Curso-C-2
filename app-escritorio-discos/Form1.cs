@@ -23,7 +23,15 @@ namespace Ejemplo_discos
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            cargar();
+            try
+            {
+                cargar();   
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
             
         }
         public void cargar()
