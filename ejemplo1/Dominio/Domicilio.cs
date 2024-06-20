@@ -14,5 +14,10 @@ namespace Dominio
         public int Depto { get; set; }
         public string Localidad { get; set; }
         public string Provincia { get; set; }
+        public override string ToString()
+        {
+            return $"{Calle}{Localidad}{Provincia}";
+        }
+        
     }
 }

@@ -34,7 +34,7 @@ namespace appRegistroPersona
             this.txtbNombre = new System.Windows.Forms.TextBox();
             this.txtbApellido = new System.Windows.Forms.TextBox();
             this.lblApellido = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.lblFechaNacimiento = new System.Windows.Forms.Label();
             this.lblDni = new System.Windows.Forms.Label();
             this.txtbDNI = new System.Windows.Forms.TextBox();
@@ -44,12 +44,12 @@ namespace appRegistroPersona
             this.lblEstadoCivil = new System.Windows.Forms.Label();
             this.grbEsatdoCivil = new System.Windows.Forms.GroupBox();
             this.grbDomicilio = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtbLocalidad = new System.Windows.Forms.TextBox();
+            this.txtbProvincia = new System.Windows.Forms.TextBox();
+            this.txtbNumeroCalle = new System.Windows.Forms.TextBox();
+            this.txtbPiso = new System.Windows.Forms.TextBox();
+            this.txtbDepto = new System.Windows.Forms.TextBox();
+            this.txtbCalle = new System.Windows.Forms.TextBox();
             this.lblProvincia = new System.Windows.Forms.Label();
             this.lblDepto = new System.Windows.Forms.Label();
             this.lblLocalidad = new System.Windows.Forms.Label();
@@ -59,7 +59,7 @@ namespace appRegistroPersona
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtbEmail = new System.Windows.Forms.TextBox();
             this.grbEsatdoCivil.SuspendLayout();
             this.grbDomicilio.SuspendLayout();
             this.SuspendLayout();
@@ -106,12 +106,12 @@ namespace appRegistroPersona
             this.lblApellido.TabIndex = 4;
             this.lblApellido.Text = "Apellido";
             // 
-            // dateTimePicker1
+            // dtpFechaNacimiento
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(249, 158);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 5;
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(249, 158);
+            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(200, 22);
+            this.dtpFechaNacimiento.TabIndex = 5;
             // 
             // lblFechaNacimiento
             // 
@@ -194,12 +194,12 @@ namespace appRegistroPersona
             // 
             // grbDomicilio
             // 
-            this.grbDomicilio.Controls.Add(this.textBox6);
-            this.grbDomicilio.Controls.Add(this.textBox5);
-            this.grbDomicilio.Controls.Add(this.textBox4);
-            this.grbDomicilio.Controls.Add(this.textBox3);
-            this.grbDomicilio.Controls.Add(this.textBox2);
-            this.grbDomicilio.Controls.Add(this.textBox1);
+            this.grbDomicilio.Controls.Add(this.txtbLocalidad);
+            this.grbDomicilio.Controls.Add(this.txtbProvincia);
+            this.grbDomicilio.Controls.Add(this.txtbNumeroCalle);
+            this.grbDomicilio.Controls.Add(this.txtbPiso);
+            this.grbDomicilio.Controls.Add(this.txtbDepto);
+            this.grbDomicilio.Controls.Add(this.txtbCalle);
             this.grbDomicilio.Controls.Add(this.lblProvincia);
             this.grbDomicilio.Controls.Add(this.lblDepto);
             this.grbDomicilio.Controls.Add(this.lblLocalidad);
@@ -213,47 +213,47 @@ namespace appRegistroPersona
             this.grbDomicilio.TabStop = false;
             this.grbDomicilio.Text = "Domicilio:";
             // 
-            // textBox6
+            // txtbLocalidad
             // 
-            this.textBox6.Location = new System.Drawing.Point(407, 40);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(172, 22);
-            this.textBox6.TabIndex = 11;
+            this.txtbLocalidad.Location = new System.Drawing.Point(407, 40);
+            this.txtbLocalidad.Name = "txtbLocalidad";
+            this.txtbLocalidad.Size = new System.Drawing.Size(172, 22);
+            this.txtbLocalidad.TabIndex = 11;
             // 
-            // textBox5
+            // txtbProvincia
             // 
-            this.textBox5.Location = new System.Drawing.Point(407, 73);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(172, 22);
-            this.textBox5.TabIndex = 10;
+            this.txtbProvincia.Location = new System.Drawing.Point(407, 73);
+            this.txtbProvincia.Name = "txtbProvincia";
+            this.txtbProvincia.Size = new System.Drawing.Size(172, 22);
+            this.txtbProvincia.TabIndex = 10;
             // 
-            // textBox4
+            // txtbNumeroCalle
             // 
-            this.textBox4.Location = new System.Drawing.Point(81, 75);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 9;
+            this.txtbNumeroCalle.Location = new System.Drawing.Point(81, 75);
+            this.txtbNumeroCalle.Name = "txtbNumeroCalle";
+            this.txtbNumeroCalle.Size = new System.Drawing.Size(100, 22);
+            this.txtbNumeroCalle.TabIndex = 9;
             // 
-            // textBox3
+            // txtbPiso
             // 
-            this.textBox3.Location = new System.Drawing.Point(81, 107);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 8;
+            this.txtbPiso.Location = new System.Drawing.Point(81, 107);
+            this.txtbPiso.Name = "txtbPiso";
+            this.txtbPiso.Size = new System.Drawing.Size(100, 22);
+            this.txtbPiso.TabIndex = 8;
             // 
-            // textBox2
+            // txtbDepto
             // 
-            this.textBox2.Location = new System.Drawing.Point(81, 135);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 7;
+            this.txtbDepto.Location = new System.Drawing.Point(81, 135);
+            this.txtbDepto.Name = "txtbDepto";
+            this.txtbDepto.Size = new System.Drawing.Size(100, 22);
+            this.txtbDepto.TabIndex = 7;
             // 
-            // textBox1
+            // txtbCalle
             // 
-            this.textBox1.Location = new System.Drawing.Point(81, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 6;
+            this.txtbCalle.Location = new System.Drawing.Point(81, 40);
+            this.txtbCalle.Name = "txtbCalle";
+            this.txtbCalle.Size = new System.Drawing.Size(100, 22);
+            this.txtbCalle.TabIndex = 6;
             // 
             // lblProvincia
             // 
@@ -317,6 +317,7 @@ namespace appRegistroPersona
             this.btnAceptar.TabIndex = 15;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -326,6 +327,7 @@ namespace appRegistroPersona
             this.btnCancelar.TabIndex = 16;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // label2
             // 
@@ -336,12 +338,12 @@ namespace appRegistroPersona
             this.label2.TabIndex = 17;
             this.label2.Text = "Email";
             // 
-            // textBox7
+            // txtbEmail
             // 
-            this.textBox7.Location = new System.Drawing.Point(249, 222);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(197, 22);
-            this.textBox7.TabIndex = 18;
+            this.txtbEmail.Location = new System.Drawing.Point(249, 222);
+            this.txtbEmail.Name = "txtbEmail";
+            this.txtbEmail.Size = new System.Drawing.Size(197, 22);
+            this.txtbEmail.TabIndex = 18;
             // 
             // frmRegistroPersona
             // 
@@ -349,7 +351,7 @@ namespace appRegistroPersona
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(684, 636);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtbEmail);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
@@ -358,7 +360,7 @@ namespace appRegistroPersona
             this.Controls.Add(this.txtbDNI);
             this.Controls.Add(this.lblDni);
             this.Controls.Add(this.lblFechaNacimiento);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpFechaNacimiento);
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.txtbApellido);
             this.Controls.Add(this.txtbNombre);
@@ -383,7 +385,7 @@ namespace appRegistroPersona
         private System.Windows.Forms.TextBox txtbNombre;
         private System.Windows.Forms.TextBox txtbApellido;
         private System.Windows.Forms.Label lblApellido;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
         private System.Windows.Forms.Label lblFechaNacimiento;
         private System.Windows.Forms.Label lblDni;
         private System.Windows.Forms.TextBox txtbDNI;
@@ -393,12 +395,12 @@ namespace appRegistroPersona
         private System.Windows.Forms.Label lblEstadoCivil;
         private System.Windows.Forms.GroupBox grbEsatdoCivil;
         private System.Windows.Forms.GroupBox grbDomicilio;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtbLocalidad;
+        private System.Windows.Forms.TextBox txtbProvincia;
+        private System.Windows.Forms.TextBox txtbNumeroCalle;
+        private System.Windows.Forms.TextBox txtbPiso;
+        private System.Windows.Forms.TextBox txtbDepto;
+        private System.Windows.Forms.TextBox txtbCalle;
         private System.Windows.Forms.Label lblProvincia;
         private System.Windows.Forms.Label lblDepto;
         private System.Windows.Forms.Label lblLocalidad;
@@ -408,7 +410,7 @@ namespace appRegistroPersona
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtbEmail;
     }
 }
 

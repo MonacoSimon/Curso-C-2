@@ -14,6 +14,8 @@ namespace Dominio
         public int Dni { get; set; }
         public string Email { get; set; }
         public string EstadoCivil { get; set; }
-        //public Domicilio domicilio { get; set; }
+        public Domicilio calle { get; set; }
+        public Domicilio localidad { get; set; }
+        public Domicilio provincia { get; set; }
     }
 }
